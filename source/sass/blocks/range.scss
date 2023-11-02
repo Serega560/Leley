@@ -1,0 +1,160 @@
+.range {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.range__container {
+  width: 280px;
+  position: relative;
+
+  @include tw() {
+    width: 223px;
+  }
+
+  @include dw() {
+    width: 318px;
+  }
+}
+
+.range__slider {
+  margin-bottom: 33px;
+
+  @include tw() {
+    margin-bottom: 30px;
+  }
+}
+.range__values {
+  position: relative;
+  display: flex;
+  column-gap: 44px;
+
+  @include tw() {
+    column-gap: 46px;
+  }
+
+  @include dw() {
+    column-gap: 50px;
+  }
+}
+
+.noUi-base, .noUi-connects {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+
+  @include tw() {
+    width: 216px;
+  }
+
+  @include dw() {
+    width: 100%;
+  }
+}
+
+.range__values::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 2px;
+  top: 20px;
+  left: 136px;
+  background-color: #BDBDBD;
+
+  @include tw() {
+    left: 111px;
+  }
+
+  @include dw() {
+    left: 155px;
+  }
+}
+
+.range__values input {
+  width: 98px;
+  border: 2px solid #7859CF;
+  height: 24px;
+  border-radius: 4px;
+  text-align: center;
+  color: #333333;
+  padding: 6px 8px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+
+  @include tw() {
+    width: 67px;
+  }
+
+  @include dw() {
+    width: 113px;
+  }
+}
+
+.range__values input:focus {
+  outline: none;
+}
+
+.noUi-target {
+  border: none;
+  background-color: #ffffff;
+}
+
+.noUi-handle {
+  border: 2px solid #7859CF;
+  border-radius: 50%;
+  background-color: #ffffff;
+
+}
+.noUi-handle:before,
+.noUi-handle:after {
+  display: none;
+}
+
+.noUi-horizontal {
+  position: relative;
+  height: 4px;
+  background-color: #7859CF;
+  top: -2px;
+
+  @include tw() {
+    top: 0;
+  }
+
+  @include dw() {
+    width: 310px;
+  }
+}
+
+.noUi-connect {
+  background-color: #d9d5e1;
+  height: 100%;
+}
+
+.noUi-horizontal .noUi-handle {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  right: -26px;
+  top:  -11px;
+  color: #7859CF;
+}
+
+.noUi-horizontal .noUi-handle-upper {
+  right: -19px;
+}
+
+.range__input::-webkit-outer-spin-button,
+  /*stylelint-disable-next-line*/
+.range__input::-webkit-inner-spin-button {
+  /*stylelint-disable-next-line*/
+  appearance: none;
+  /*stylelint-disable-next-line*/
+  margin: 0;
+  /*stylelint-disable-next-line*/
+}
+
+/*stylelint-disable-next-line*/
+.range__input[type="number"] {
+  /*stylelint-disable-next-line*/
+  appearance: textfield;
+  /*stylelint-disable-next-line*/
+}

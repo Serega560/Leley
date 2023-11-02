@@ -1,0 +1,23 @@
+.map {
+  width: 100%;
+}
+
+.map__wrapper {
+  width: 100%;
+  display: block;
+  height: 420px;
+
+  @include tw() {
+    height: 480px;
+  }
+
+  @include dw() {
+    height: 540px;
+  }
+}
+
+.map__wrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

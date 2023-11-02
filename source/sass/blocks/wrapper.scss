@@ -1,0 +1,9 @@
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include dw() {
+    padding: 0 40px;
+  }
+}

@@ -1,0 +1,276 @@
+.header {
+  display: flex;
+}
+
+.header__wrapper {
+  display: flex;
+  padding: 0;
+  width: 100%;
+
+  @include tw() {
+    width: 768px;
+    margin: 0 auto;
+  }
+
+  @include dw() {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.header__body {
+  padding: 12px;
+  padding-right: 0;
+  padding-left: 20px;
+  width: 82px;
+  height: 36px;
+
+  @include tw() {
+    padding-bottom: 22px;
+    padding-top: 22px;
+  }
+
+  @include dw() {
+    display: flex;
+    width: 350px;
+    column-gap: 20px;
+    padding-left: 40px;
+  }
+}
+
+.header__body span {
+  display: none;
+
+  @include dw() {
+    display: block;
+    width: 151px;
+    font-size: 12px;
+  }
+}
+
+.header__logo {
+
+  @include dw() {
+    width: 170px;
+  }
+}
+
+.header__user-list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  margin-right: 60px;
+
+  @include tw() {
+    margin: 0;
+    margin-left: 40px;
+  }
+
+  @include dw() {
+    column-gap: 20px;
+    margin-left: 120px;
+
+  }
+}
+
+.header__user-item {
+  padding: 20px;
+  padding-left: 26px;
+
+  @include tw() {
+    padding: 30px 22px;
+  }
+}
+.header__user-link {
+
+  @include dw() {
+    display: flex;
+    column-gap: 8px;
+    text-transform: lowercase;
+  }
+}
+
+.header__user-link span {
+  display: none;
+
+  @include dw() {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}
+
+.header .header__burger {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+  cursor: pointer;
+  border: none;
+  width: 22px;
+  height: 18px;
+  display: block;
+  background-color: #ffffff;
+  transition: 0.5s ease-in-out;
+
+  &::after,
+  &::before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 1.5px;
+    background-color: #000000;
+    top: 2px;
+    right: 0;
+  }
+
+  &::after {
+    top: 12px;
+    box-shadow: 0 -5px 0 0 #000000;
+  }
+
+  @include tw() {
+    display: none;
+    position: relative;
+  }
+}
+
+.header--nav-opened .header__burger {
+  &::after {
+    transform: rotate(-45deg);
+    width: 20px;
+    top: 8px;
+    box-shadow: none;
+    transition: 0.4s ease-in-out;
+    background-color: #7859CF;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    width: 20px;
+    top: 8px;
+    transition: 0.4s ease-in-out;
+    background-color: #7859CF;
+  }
+}
+
+.header .header__list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  z-index: 100;
+  display: none;
+  width: 100%;
+  background-color: #fff;
+
+
+  @include tw() {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 67px;
+    width: 419px;
+    text-transform: lowercase;
+  }
+
+  @include dw() {
+    width: 500px;
+    margin-left: 128px;
+  }
+}
+
+.header--nav-opened .header__list {
+  position: absolute;
+  z-index: 100;
+  top: 60px;
+  left: 0;
+  background-color: #fff;
+  display: block;
+}
+
+.header__item {
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  @include tw() {
+    padding: 32px 21px;
+  }
+}
+
+.header__item::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: #e6e6e6;
+  height: 1px;
+}
+
+
+.header__item:not(last-child) {
+
+  @include dw() {
+    margin-right: 20px;
+  }
+}
+
+.header__item--current .header__link::after {
+
+  @include tw() {
+  position: absolute;
+  content: "";
+  width: 100%;
+  background-color: #7859CF;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  }
+}
+
+.header__link:hover {
+  color: #7859CF;
+}
+
+.header__item:active {
+  color: #7859CF;
+  background-color: #F0EBFF;
+}
+
+
+.header__link:focus-visible {
+  outline: 2px solid #7859CF;
+  outline-offset: 29px;
+  color: #7859CF;
+}
+
+
+.header__user-item:hover .header__user-link{
+  color: #7859CF;
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
+.header__user-item:active {
+  color: #7859CF;
+  background-color: #F0EBFF;
+}
+
+.header__user-link:focus-visible {
+  outline: 2px solid #7859CF;
+  outline-offset: 29px;
+  color: #7859CF;
+}

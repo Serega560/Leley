@@ -1,0 +1,159 @@
+.footer__wrapper {
+  padding: 20px 20px 30px;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  @include tw() {
+    padding: 40px 20px 40px;
+  }
+
+  @include dw() {
+    padding: 40px 0 40px;
+    padding-bottom: 26px;
+  }
+}
+
+.footer__block {
+
+  @include dw() {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+  }
+}
+
+.footer__logo-socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 20px;
+
+  @include tw() {
+    padding-bottom: 6px;
+  }
+
+  @include dw() {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    padding-left: 40px;
+    padding-bottom: 0;
+  }
+}
+
+.footer__logo {
+
+  @include dw() {
+    margin-bottom: 10px;
+  }
+}
+
+.footer__logo-socials .footer__text {
+  display: none;
+  margin: 0;
+  width: 316px;
+
+  @include dw() {
+    display: block;
+    color: #333333;
+    margin-bottom: 50px;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.footer__nav {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 38px;
+  padding-top: 20px;
+  column-gap: 50px;
+
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: repeat(3, 223px);
+    padding-top: 24px;
+    column-gap: 30px;
+  }
+
+  @include dw() {
+    grid-template-columns: repeat(3, 318px);
+    padding-top: 10px;
+  }
+}
+
+.footer__wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer__wrapper h3 {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #7859CF;
+  margin: 0;
+  margin-bottom: 12px;
+
+  @include dw() {
+    padding-top: 0;
+  }
+}
+
+.footer__wrapper a:hover {
+  color: #9070EC;
+
+  &:active {
+    color: #593CAC;
+  }
+}
+
+.footer__wrapper a:focus-visible {
+  outline: 2px solid #7859CF;
+  outline-offset: 10px;
+}
+
+.footer__wrapper li {
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 8px 0;
+}
+
+.footer__wrapper li:not(last-child) {
+  margin-bottom: 4px;
+}
+
+.footer__copyright {
+  padding-top: 25px;
+  margin: 0 auto;
+
+}
+
+.footer__copyright-link {
+  color: #BDBDBD;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  width: 280px;
+  font-size: 12px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__copyright-link:hover {
+  color: #7859CF;
+
+  &:active {
+    color: #593CAC;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #9070EC;
+    outline-offset: 10px;
+  }
+}
