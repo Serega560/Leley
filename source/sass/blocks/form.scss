@@ -1,0 +1,266 @@
+.form__fieldset {
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 4px;
+  margin-bottom: 4px;
+
+  @include tw() {
+    display: grid;
+    grid-template-columns: repeat(2, 223px);
+    column-gap: 30px;
+    margin-bottom: 14px;
+  }
+
+  @include dw() {
+    display: block;
+  }
+}
+
+.form__fieldset-block {
+  width: 280px;
+
+  @include dw() {
+    margin-bottom: 3px;
+  }
+}
+
+.form__list {
+  padding: 0;
+  list-style-type: none;
+  margin: 0;
+  padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: -2px;
+
+}
+
+.form__fieldset .form__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 20px;
+  position: relative;
+  padding-top: 20px;
+}
+
+.form__input-user:not(:last-child) {
+  margin-bottom: 14px;
+
+  @include tw() {
+    margin-bottom: 20px;
+  }
+}
+
+.form__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  flex-shrink: 0;
+
+}
+
+.form__input-text .form__text {
+  @include tw() {
+    margin-right: 11px;
+  }
+}
+
+.form__text {
+  padding-left: 36px;
+
+  @include tw() {
+    padding-left: 35px;
+  }
+}
+
+.form__title {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+}
+
+.form__fieldset--add .form__title {
+  width: 156px;
+}
+
+.form__comment-text .form__title {
+  width: 144px;
+}
+
+.form__control-radio {
+  position: relative;
+}
+
+.form__input[type="radio"]:hover + .form__mark::before {
+  background-color: #beb6e5;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  content: "";
+}
+
+.form__radio .form__mark {
+  position: absolute;
+  content: "";
+  width: 22px;
+  height: 22px;
+  border: 2px solid #BDBDBD;
+  top: -5px;
+  left: 0;
+  border-radius: 50%;
+
+  &:hover {
+    border: 2px solid #7859CF;
+  }
+}
+
+.form__input--radio:checked + .form__mark {
+  position: absolute;
+  content: "";
+  outline: 2px solid #9070EC;
+  outline-offset: -2px;
+}
+
+.form__input[type="radio"]:checked + .form__mark::before {
+  background-color: #7859CF;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  top: 2px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  content: "";
+}
+
+.form__input[type="radio"]:disabled + .form__mark::before {
+  background-color: #ffffff;
+  pointer-events: none;
+}
+
+.form__input[type="radio"]:disabled + .form__mark {
+  border: 2px solid #E2E2E2;
+  pointer-events: none;
+}
+
+.form__input:disabled ~ span {
+  color: #BDBDBD;
+  pointer-events: none;
+}
+
+.form__input-city {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+}
+
+.form__input-city-vis + .form__control {
+  position: absolute;
+  display: block;
+  width: 42px;
+  height: 24px;
+  border-radius: 25px;
+  background: #BDBDBD;
+  transition: background 0.5s ease;
+}
+
+.form__input-city-vis + .form__control::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: white;
+  top: 50%;
+  left: 1px;
+  transform: translateY(-50%);
+  transition: left 0.5s ease;
+}
+
+.form__input-city-vis:checked + .form__control{
+  background: #7859CF;
+}
+
+.form__input-city-vis:hover + .form__control{
+  outline: 2px solid #9070EC;
+  outline-offset: -2px;
+  background-color: #beb6e5;
+}
+
+.form__input-city-vis:checked + .form__control::before  {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 20px;
+}
+
+.form__text.form__text-city {
+  padding-left: 52px;
+}
+
+.form__button-block {
+  display: flex;
+  row-gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 45px;
+  justify-content: center;
+
+  @include tw() {
+    column-gap: 21px;
+  }
+}
+
+.form__button {
+  width: 280px;
+  padding: 8px 20px;
+  font-size: 18px;
+
+  @include tw() {
+    width: 137px;
+    margin-left: -26px;
+  }
+
+  @include dw() {
+    margin-left: 0;
+    width: 148px;
+  }
+}
+
+.form__button-reset {
+  background-color: #ffffff;
+  color: #7859CF;
+}
+
+.form__button-reset:active {
+  color: #ffffff;
+}
+
+.form__button-reset:focus {
+  color: #ffffff;
+}
+
+.form__input-city[type="checkbox"]:disabled + .form__control {
+  background-color: #E2E2E2;
+  pointer-events: none;
+  outline: none;
+}
+
+.form__input-city:disabled ~ span {
+  color: #BDBDBD;
+  pointer-events: none;
+}
+

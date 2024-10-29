@@ -1,0 +1,41 @@
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+a, body {
+  color: #1f1f1f;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  list-style-type: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+main {
+  min-height: calc(75vh - 80px);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+
+  &:visited {
+    color: inherit;
+  }
+}

@@ -1,0 +1,39 @@
+.contacts, .contacts a {
+  position: relative;
+  transition: all .3s ease-in-out;
+}
+
+.contacts__item {
+  padding-left: 19px;
+  padding-top: 6px;
+  line-height: 3px;
+  font-size: 14px;
+  text-transform: none;
+}
+
+.contacts__item br {
+  @media (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.contacts__item {
+  a::before {
+    position: absolute;
+    content: "";
+    background-repeat: no-repeat;
+    width: 70px;
+    height: 70px;
+    background-image: url("../../images/svg/telegram.svg");
+    top: -27px;
+    left: 6px;
+    background-size: 50px 50px;
+    //background-color: #7a7293;
+    border-radius: 8px;
+    background-position: 50% 50%;
+  }
+}
+
+a:hover {
+  opacity: 0.8;
+}
